@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 让页面在手机上也显示好看 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的摄影时光</title>
+    <!-- 链接CSS样式文件 -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- 页眉区域，放一个醒目的标题 -->
+    <header>
+        <h1>我的摄影集</h1>
+        <p>用相机记录下的那些瞬间</p>
+    </header>
+
+    <!-- 主要内容区域，用来放所有的照片卡片 -->
+    <main class="gallery">
+        <!-- 
+            一个照片卡片就是一个摄影作品条目。
+            你可以复制粘贴这个 <div class="card"> 区块来添加更多照片。
+        -->
+        <div class="card">
+            <!-- 照片会在这里显示，src后面要填你的图片路径 -->
+            <img src="assets/images/photo1.jpg" alt="照片描述" class="card-image">
+            <div class="card-info">
+                <!-- 这里就是你的核心描述：时间、相机、胶卷、故事 -->
+                <h2>2023年 携 富士X-T5</h2>
+                <p class="description">拍摄于西藏，使用的是富士原厂35mm镜头。那天的阳光和雪山一样纯净。</p>
+                <!-- 一个查看详情的按钮，后面我们会用JavaScript给它增加功能 -->
+                <button class="view-btn">查看大图</button>
+            </div>
+        </div>
+
+        <!-- 第二个卡片示例： -->
+        <div class="card">
+            <img src="assets/images/photo2.jpg" alt="上海街景" class="card-image">
+            <div class="card-info">
+                <h2>2024年 携 徕卡M6</h2>
+                <p class="description">拍摄于上海，胶卷是柯达Portra 400。想捕捉弄堂里的烟火气。</p>
+                <button class="view-btn">查看大图</button>
+            </div>
+        </div>
+        <!-- 继续添加更多的卡片... -->
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 我的摄影博客 2024</p>
+    </footer>
+
+    <!-- 链接JavaScript交互文件 -->
+    <script src="js/main.js"></script>
+</body>
+</html>
