@@ -1,0 +1,104 @@
+/* 简单重置所有标签的默认样式，让布局更可控 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* 页眉样式 */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #222;
+}
+
+/* 照片画廊区域 */
+.gallery {
+    display: grid;  /* 使用网格布局 */
+    /* 响应式：每列最小300px，如果空间够就自动填充更多列 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;  /* 卡片之间的间距 */
+    max-width: 1200px;
+    margin: 0 auto; /* 居中显示 */
+}
+
+/* 单个照片卡片 */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden; /* 确保圆角能裁切图片 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 鼠标悬停时，卡片微微抬起，增加互动感 */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* 卡片里的图片 */
+.card-image {
+    width: 100%;
+    height: 250px; /* 固定高度，让所有卡片对齐 */
+    object-fit: cover; /* 保证图片填满区域，不变形，多余部分裁剪 */
+    display: block;
+}
+
+/* 卡片信息区域 */
+.card-info {
+    padding: 20px;
+}
+
+.card-info h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.card-info .description {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+/* 查看大图按钮 */
+.view-btn {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer; /* 鼠标变成小手 */
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.view-btn:hover {
+    background-color: #005a9e;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: #888;
+    font-size: 0.9rem;
+}
